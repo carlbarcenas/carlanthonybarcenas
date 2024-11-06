@@ -57,12 +57,14 @@ li {
     list-style-type: none;
     font-size: 48px;
     filter: blur(2px);
-    transition: filter 1.5s ease;
+    transition: all 1.5s ease;
 }
 
 li:hover {
     filter: none;
     background-color: black;
     color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
     transition: all 0.5s ease;
 }
