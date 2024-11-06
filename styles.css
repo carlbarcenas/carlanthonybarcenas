@@ -1,8 +1,11 @@
+body {
+    margin: 0;
+}
+
 .header {
-    display: flex;
-    flex-direction: column;
     background-color: #DBD8CE;
-    width: 100%;
+    margin: 0;
+    padding: 0;
 
     text-align: center;
     justify-content: center;
