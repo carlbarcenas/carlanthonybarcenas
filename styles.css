@@ -40,10 +40,18 @@ h1 {
 }
 
 /* Body */
+/* TODO: Selected Item Styling. Maybe only move the black highlight if the object contains class "active"?*/
+.body-container {
+    display: flex;
+    justify-content: center;
+}
+
 .navbar {
     margin: 0;
     padding: 0;
     padding-top: 10vh;
+    padding-left: 6vw;
+    padding-right: 6vw;
 }
 
 ul {
@@ -62,9 +70,18 @@ li {
 
 li:hover {
     filter: none;
-    background-color: black;
-    color: white;
+    /*background-color: black;
+    color: white;*/
     margin-top: 20px;
     margin-bottom: 20px;
     transition: all 0.5s ease;
+}
+
+.active {
+    filter: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    transition: all 0.5s linear;
 }
