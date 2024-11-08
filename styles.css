@@ -66,6 +66,7 @@ li {
     font-size: 48px;
     filter: blur(2px);
     transition: all 1.5s ease;
+    cursor: pointer;
 }
 
 li:hover {
@@ -77,7 +78,7 @@ li:hover {
     transition: all 0.5s ease;
 }
 
-.active {
+#active {
     filter: none;
     margin-top: 20px;
     margin-bottom: 20px;
