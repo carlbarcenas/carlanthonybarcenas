@@ -26,11 +26,17 @@ h1 {
 .logo {
     width: 40;
     height: 40px;
+    cursor: pointer;
 }
 
 .logo:hover {
     transform: scale(1.1);
     transition: all .3s ease-in-out;
+}
+
+.logo:active {
+    transform: scale(1.2);
+    transition: all .3s;
 }
 
 .transition-space {
@@ -67,6 +73,12 @@ li {
     filter: blur(2px);
     transition: all 1.5s ease;
     cursor: pointer;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 li:hover {
