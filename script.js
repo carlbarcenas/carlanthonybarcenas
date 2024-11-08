@@ -9,9 +9,5 @@ navbar_items.forEach((listitem) => {
             active_nav.removeAttribute("id");
             active_nav = document.querySelector("#active");
         }
-        else {
-            console.log("pingpong");
-        }
-        
     })
 })
