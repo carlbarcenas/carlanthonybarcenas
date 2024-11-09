@@ -8,6 +8,19 @@ navbar_items.forEach((listitem) => {
             listitem.setAttribute("id", "active");
             active_nav.removeAttribute("id");
             active_nav = document.querySelector("#active");
+            console.log(active_nav); // DELETEME, debugging
+            console.log(active_nav.className);
         }
     })
+})
+
+// Listening to navbar for changes
+active_nav.addEventListener("change", function() {
+    var active_class = active_nav.className();
+
+    switch (active_nav.className) {
+        case 'aboutme':
+            aboutme();
+            break;
+    }
 })
