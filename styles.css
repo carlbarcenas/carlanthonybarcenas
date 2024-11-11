@@ -68,7 +68,9 @@ h1 {
 /* TODO: Selected Item Styling. Maybe only move the black highlight if the object contains class "active"?*/
 .body-container {
     display: flex;
+    flex: 1 1 auto;
     justify-content: center;
+    align-items: center;
 }
 
 .navbar {
@@ -116,4 +118,16 @@ li:hover {
     background-color: black;
     color: white;
     transition: all 0.5s linear;
+}
+
+
+/* About Me Styling */
+.selfImage {
+    width: 33vw;
+    height: auto;
+}
+
+.aboutMeText {
+    width: 33vw;
+    height: auto;
 }

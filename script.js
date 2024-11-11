@@ -5,22 +5,21 @@ var active_nav = document.querySelector("#active");
 navbar_items.forEach((listitem) => {
     listitem.addEventListener("click", () => {
         if(listitem.getAttribute("id") != "active") {
-            listitem.setAttribute("id", "active");
-            active_nav.removeAttribute("id");
-            active_nav = document.querySelector("#active");
-            console.log(active_nav); // DELETEME, debugging
+            listitem.setAttribute("id", "active");              // Set clicked item as "active" ID
+            active_nav.removeAttribute("id");                   // Remove "active" ID from old selection
+            active_nav = document.querySelector("#active");     // Update active_nav variable
+            
+            // Update L + R Panels
+            switch (active_nav.className) {
+                case 'aboutme':
+                    aboutme();
+                    break;
+            }
+
+
+            // DELETE ME, used for debugging
+            console.log(active_nav);
             console.log(active_nav.className);
         }
     })
-})
-
-// Listening to navbar for changes
-active_nav.addEventListener("change", function() {
-    var active_class = active_nav.className();
-
-    switch (active_nav.className) {
-        case 'aboutme':
-            aboutme();
-            break;
-    }
 })
