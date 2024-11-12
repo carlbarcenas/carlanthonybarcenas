@@ -9,10 +9,14 @@ navbar_items.forEach((listitem) => {
             active_nav.removeAttribute("id");                   // Remove "active" ID from old selection
             active_nav = document.querySelector("#active");     // Update active_nav variable
             
+            // Delete current panels
+            clearPanel("leftpanel");
+            clearPanel("rightpanel");
+
             // Update L + R Panels
             switch (active_nav.className) {
                 case 'aboutme':
-                    aboutme();
+                    aboutMe();
                     break;
             }
 
