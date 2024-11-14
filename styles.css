@@ -65,16 +65,31 @@ h1 {
 }
 
 /* Body Animations */
-.slide-left {
-    position:absolute;
-    left: -500px;
-    
+
+#leftpanel, #rightpanel {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
 }
+
+.slide-top {
+    animation: slide-in 1.5s forwards;
+    -webkit-animation: slide-in 1.5s forwards;
+}
+
+@keyframes slide-in {
+    100% { transform: translateY(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateY(0%); }
+}
+
 
 /* Body */
 /* TODO: Selected Item Styling. Maybe only move the black highlight if the object contains class "active"?*/
 .body-container {
     display: flex;
+    flex-direction: row;
     flex: 1 1 auto;
     justify-content: center;
     align-items: center;
@@ -84,8 +99,7 @@ h1 {
 .navbar {
     margin: 0;
     padding: 0;
-    padding-left: 6vw;
-    padding-right: 6vw;
+    width: 30vw;
 }
 
 ul {
