@@ -12,9 +12,9 @@ navbar_items.forEach((listitem) => {
             }
             active_nav = document.querySelector("#active");     // Update active_nav variable
             
-            // Delete current panels
-            clearPanel("leftpanel");
-            clearPanel("rightpanel");
+            // Clear panels
+            //clearPanel("leftpanel");
+            //clearPanel("rightpanel");
 
             // Update L + R Panels
             switch (active_nav.className) {
