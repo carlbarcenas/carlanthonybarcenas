@@ -8,7 +8,7 @@ function aboutMe() {
     const image = document.createElement("img");
     image.src = 'images/grad_photo.jpg';
     image.setAttribute("class", "selfImage");
-    image.setAttribute("class", "slide-top");
+    image.setAttribute("class", "pop-in"); // slide-in or pop-in?
     image.style.width = "30vw";
     image.style.height = "auto";
     image.style.borderRadius = "40px";
@@ -19,7 +19,7 @@ function aboutMe() {
     const rightPanel = document.querySelector(".rightpanel");   // Get Right Panel
     const aboutText = document.createElement("h1");             // Create and style about me text
     aboutText.setAttribute("class", "aboutMeText");
-    aboutText.setAttribute("class", "slide-top");
+    aboutText.setAttribute("class", "pop-in");
     aboutText.textContent = "Marquette University Alumni. Software Engineer. IT Professional."
     aboutText.style.width = "30vw";
     aboutText.style.height = "auto";

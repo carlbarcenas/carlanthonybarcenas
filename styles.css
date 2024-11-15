@@ -40,6 +40,7 @@ h1 {
     background-color: black;
 
     padding-top: 10px;
+    z-index: 1000;
 }
 
 .logo {
@@ -65,23 +66,44 @@ h1 {
 }
 
 /* Body Animations */
-
+/*
 #leftpanel, #rightpanel {
     transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
 }
 
-.slide-top {
+.slide-in {
     animation: slide-in 1.5s forwards;
     -webkit-animation: slide-in 1.5s forwards;
 }
 
 @keyframes slide-in {
-    100% { transform: translateY(0%); }
+    100% { transform: translateY(100%); }
 }
 
 @-webkit-keyframes slide-in {
-    100% { -webkit-transform: translateY(0%); }
+    100% { -webkit-transform: translateY(100%); }
+}
+*/
+/* Pop In */
+#leftpanel, #rightpanel {
+    opacity: 0;
+}
+
+.pop-in {
+    animation: pop-in 1.5s forwards;
+    -webkit-animation: pop-in 1.5s forwards;
+}
+
+@keyframes pop-in {
+    75% {
+        scale: 1.1;
+        opacity: 100%;
+    }
+    100% {
+        scale: 1;
+        opacity: 100%;
+    }
 }
 
 
@@ -89,11 +111,12 @@ h1 {
 /* TODO: Selected Item Styling. Maybe only move the black highlight if the object contains class "active"?*/
 .body-container {
     display: flex;
+    width: 100vw;
+    height: 100vh;
     flex-direction: row;
     flex: 1 1 auto;
     justify-content: center;
     align-items: center;
-    margin: 10vh 0 0 0;
 }
 
 .navbar {
