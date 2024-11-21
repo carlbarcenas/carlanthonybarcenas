@@ -18,13 +18,16 @@ navbar_items.forEach((listitem) => {
                     transitionState(aboutMe);
                     break;
                 case 'portfolio':
+                    transitionState(portfolio);
                     break;
                 case 'resume':
                     transitionState(resume);
                     break;
                 case 'contact':
+                    transitionState(contact);
                     break;
                 case 'socials':
+                    transitionState(socials);
                     break;
             }
 

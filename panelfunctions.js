@@ -66,7 +66,10 @@ function resume() {
 }
 
 function contact() {
+    const leftPanel = document.getElementById("leftpanel");
 
+
+    const rightPanel = document.getElementById("rightpanel");
 }
 
 function socials() {
