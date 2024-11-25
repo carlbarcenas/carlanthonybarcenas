@@ -26,9 +26,6 @@ navbar_items.forEach((listitem) => {
                 case 'contact':
                     transitionState(contact);
                     break;
-                case 'socials':
-                    transitionState(socials);
-                    break;
             }
 
         }

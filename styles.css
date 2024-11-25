@@ -110,11 +110,25 @@ h1 {
 .body-container {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     flex-direction: row;
     flex: 1 1 auto;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+}
+
+.column {
+    width: 45%;
+    padding: 10px;
+    height: auto;
+    text-align: center;
+}
+
+.midcolumn {
+    width: 10%;
+    padding: 10px;
+    height: auto;
+    text-align: center;
 }
 
 .navbar {
