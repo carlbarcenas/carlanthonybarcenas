@@ -66,7 +66,7 @@ function resume() {
     resume.type = "application/pdf";
 
     const rightPanel = document.getElementById("rightpanel");
-    const download = document.createElement("h1");
+    const download = document.createElement("h2");
     download.textContent = "Download PDF";
     download.style.width = "30vw";
     download.style.height = "auto";
@@ -79,10 +79,8 @@ function resume() {
 
 function contact() {
     const leftPanel = document.getElementById("leftpanel");
-
     const socialHeader = document.createElement("h1");
     socialHeader.textContent = "SOCIALS";
-
     const linkedInLink = document.createElement("a");
     linkedInLink.href = "http://www.linkedin.com/in/carlbarcenas/";
     linkedInLink.target = "_blank";
@@ -90,23 +88,30 @@ function contact() {
     linkedInLogo.src = "/images/linkedInLogo.png";
     linkedInLogo.classList.add("logo");
     linkedInLink.appendChild(linkedInLogo);
+    const githubLink = document.createElement("a");
+    githubLink.href = "http://www.github.com/carlbarcenas/";
+    githubLink.target = "_blank";
+    const githubLogo = document.createElement("img");
+    githubLogo.src = "/images/githubLogo.png";
+    githubLogo.classList.add("logo");
+    githubLink.appendChild(githubLogo);
 
     const rightPanel = document.getElementById("rightpanel");
     const contactHeader = document.createElement("h1");
     contactHeader.innerText = "CONTACTS";
+    contactHeader.style.paddingTop = "15px";
     const phoneNumber = document.createElement("h2");
     phoneNumber.innerHTML = "+1(630)812-8124";
     const email = document.createElement("h2");
     email.innerHTML = "carlanthonybarcenas@gmail.com";
 
-    leftPanel.append(socialHeader);
-    leftPanel.append(linkedInLink);
+    rightPanel.append(socialHeader);
+    rightPanel.append(linkedInLink);
+    rightPanel.append(githubLink);
 
     rightPanel.append(contactHeader);
     rightPanel.append(phoneNumber);
     rightPanel.append(email);
-    rightPanel.style.display = "flex";
-    rightPanel.style.flexDirection = "column";
     var nodes = rightPanel.childNodes;          // Edit Margin of right panel nodes
     for (var i = 0; i < nodes.length; i++) {
         nodes[i].style.margin = 0;
