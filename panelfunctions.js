@@ -79,6 +79,8 @@ function resume() {
 
 function contact() {
     const leftPanel = document.getElementById("leftpanel");
+
+    const rightPanel = document.getElementById("rightpanel");
     const socialHeader = document.createElement("h1");
     socialHeader.textContent = "SOCIALS";
     const linkedInLink = document.createElement("a");
@@ -95,8 +97,6 @@ function contact() {
     githubLogo.src = "/images/githubLogo.png";
     githubLogo.classList.add("logo");
     githubLink.appendChild(githubLogo);
-
-    const rightPanel = document.getElementById("rightpanel");
     const contactHeader = document.createElement("h1");
     contactHeader.innerText = "CONTACTS";
     contactHeader.style.paddingTop = "15px";
