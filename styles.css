@@ -39,8 +39,58 @@ h1 {
     justify-content: center;
     background-color: black;
 
-    padding-top: 10px;
+    padding: 10px 0 10px 0;
     z-index: 1000;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    width: 30vw;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "PT Serif";
+}
+
+li {
+    padding: 0 14px 0 14px;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    filter: blur(1px);
+    transition: all 1.5s ease;
+    cursor: pointer;
+    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+    text-underline-offset: 0.1em;
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+li:hover {
+    filter: none;
+    text-decoration-color: rgb(255, 255, 255);
+    /*background-color: black;
+    color: white;*/
+    transition: all 0.5s ease;
+}
+
+#active {
+    filter: none;
+    background-color: black;
+    color: white;
+    text-decoration-color: rgb(255, 255, 255);
+    text-underline-offset: 0.4em;
+    transition: all 0.5s linear;
 }
 
 .logo {
@@ -76,8 +126,8 @@ h1 {
     0% {
         opacity: 0;
     }
-    75% {
-        transform: scale(1.1);
+    30% {
+        transform: scale(1.05);
         opacity: 0.5;
     }
     100% {
@@ -130,51 +180,6 @@ h1 {
     padding: 10px;
     height: auto;
     text-align: center;
-}
-
-.navbar {
-    margin: 0;
-    padding: 0;
-    width: 30vw;
-}
-
-ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: "PT Serif";
-}
-
-li {
-    list-style-type: none;
-    font-size: 48px;
-    filter: blur(2px);
-    transition: all 1.5s ease;
-    cursor: pointer;
-
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-
-li:hover {
-    filter: none;
-    /*background-color: black;
-    color: white;*/
-    margin: 20px 0 20px 0;
-    transition: all 0.5s ease;
-}
-
-#active {
-    filter: none;
-    margin: 20px 0 20px 0;
-    padding: 0 45px 0 45px;
-    background-color: black;
-    color: white;
-    transition: all 0.5s linear;
 }
 
 
