@@ -118,8 +118,8 @@ li:hover {
 
 /* Body Animations */
 .pop-in {
-    animation: pop-in 0.75s;
-    -webkit-animation: pop-in 0.75s;
+    animation: pop-in 0.15s;
+    -webkit-animation: pop-in 0.15s;
 }
 
 @keyframes pop-in {
@@ -127,7 +127,7 @@ li:hover {
         opacity: 0;
     }
     30% {
-        transform: scale(1.05);
+        transform: scale(1.025);
         opacity: 0.5;
     }
     100% {
@@ -137,8 +137,8 @@ li:hover {
 }
 
 .pop-out {
-    animation: pop-out 0.3s;
-    -webkit-animation: pop-out 0.3s;
+    animation: pop-out 0.15s;
+    -webkit-animation: pop-out 0.15s;
 }
 
 @keyframes pop-out {
@@ -146,11 +146,11 @@ li:hover {
         opacity: 1;
     }
     75% {
-        transform: scale(1.1);
+        transform: scale(1.05);
         opacity: 0.5;
     }
     100% {
-        transform: scale(1.2);
+        transform: scale(1.1);
         opacity: 0;
     }
 }
