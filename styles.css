@@ -1,35 +1,17 @@
-.pt-serif-regular {
-    font-family: "PT Serif", serif;
-    font-weight: 400;
-    font-style: normal;
-}
 
-.pt-serif-bold {
-    font-family: "PT Serif", serif;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.pt-serif-regular-italic {
-    font-family: "PT Serif", serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.pt-serif-bold-italic {
-    font-family: "PT Serif", serif;
-    font-weight: 700;
-    font-style: italic;
-}
 
 /*------------------------------------------------------------------------------------*/
 /* General */
+* {
+    font-family: "Montserrat";
+}
+
 body {
     margin: 0;
 }
 
 h1 {
-    font-family: "Gloock";
+    font-family: "Montserrat";
 }
 
 /*------------------------------------------------------------------------------------*/
@@ -197,4 +179,19 @@ li:hover {
 .downloadBtn {
     width: 30vw;
     height: auto;
+}
+
+/* Contact */
+.body-container h1 {
+    margin: 2vh 0 0 0;
+}
+
+.body-container h2 {
+    margin: 0;
+}
+
+.logoLinks {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
 }

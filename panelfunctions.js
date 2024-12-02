@@ -29,6 +29,10 @@ function aboutMe() {
     aboutText.classList.add("aboutMeText");
     aboutText.textContent = "Marquette University Alumni. Software Engineer. IT Professional.";
 
+    const bodyText = document.createElement("p");
+    bodyText.classList.add("bodyText");
+    bodyText.textContent = "Hi, my name is Carl Barcenas. I'm a graduate of Marquette University with a B.S. in Computer Engineering."
+
     // Get body selector and style
     const body = document.getElementById("body-container");
 
@@ -36,6 +40,7 @@ function aboutMe() {
     body.classList.add("pop-in");
     body.appendChild(image);
     body.appendChild(aboutText);
+    body.appendChild(bodyText);
 }
 
 function portfolio() {
@@ -59,6 +64,7 @@ function resume() {
 }
 
 function contact() {
+    // Create Logos
     const socialHeader = document.createElement("h1");
     socialHeader.textContent = "SOCIALS";
     const linkedInLink = document.createElement("a");
@@ -68,6 +74,7 @@ function contact() {
     linkedInLogo.src = "/images/linkedInLogo.png";
     linkedInLogo.classList.add("logo");
     linkedInLink.appendChild(linkedInLogo);
+
     const githubLink = document.createElement("a");
     githubLink.href = "http://www.github.com/carlbarcenas/";
     githubLink.target = "_blank";
@@ -75,6 +82,13 @@ function contact() {
     githubLogo.src = "/images/githubLogo.png";
     githubLogo.classList.add("logo");
     githubLink.appendChild(githubLogo);
+
+    const logoLinks = document.createElement("div");
+    logoLinks.classList.add("logoLinks");
+    logoLinks.appendChild(linkedInLink);
+    logoLinks.appendChild(githubLink);
+
+    // Create Contacts
     const contactHeader = document.createElement("h1");
     contactHeader.innerText = "CONTACTS";
     contactHeader.style.paddingTop = "15px";
@@ -85,8 +99,7 @@ function contact() {
 
     const body = document.getElementById("body-container");
     body.appendChild(socialHeader);
-    body.appendChild(linkedInLink);
-    body.appendChild(githubLink);
+    body.appendChild(logoLinks);
     body.appendChild(contactHeader);
     body.appendChild(phoneNumber);
     body.appendChild(email);
