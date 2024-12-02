@@ -2,26 +2,18 @@
 // Parameters: nextStateFunction = name of the function being transitioned to.
 function transitionState(nextStateFunction) {
     // Add panels to pop-out
-    const leftpanel = document.getElementById("leftpanel");
-    const rightpanel = document.getElementById("rightpanel");
-    leftpanel.classList.add("pop-out");
-    rightpanel.classList.add("pop-out");
+    const body = document.getElementById("body-container");
+    body.classList.add("pop-out");
 
     // Wait for right panel animation to finish, then add new
-    rightpanel.addEventListener("animationend", function () {
-        rightpanel.classList.remove("pop-out");
-        leftpanel.classList.remove("pop-out");
-        rightpanel.innerHTML = "";
-        leftpanel.innerHTML = "";
+    body.addEventListener("animationend", function () {
+        body.classList.remove("pop-out");
+        body.innerHTML = "";
         
         // Memory Cleanup
-        var nodes = rightpanel.childNodes;
+        var nodes = body.childNodes;
         for (var i = 0; i < nodes.length; i++) {
-            rightpanel.removeChild(nodes[i]);
-        }
-        var nodes = leftpanel.childNodes;
-        for (var i = 0; i < nodes.length; i++) {
-            leftpanel.removeChild(nodes[i]);
+            body.removeChild(nodes[i]);
         }
 
         nextStateFunction();
@@ -29,28 +21,21 @@ function transitionState(nextStateFunction) {
 }
 
 function aboutMe() {
-    // Create left panel of image
-    const leftPanel = document.getElementById("leftpanel");
+    // Create and style elements
     const image = document.createElement("img");
     image.src = 'images/grad_photo.jpg';
     image.classList.add("selfImage");
-    image.style.width = "100%";
-    image.style.height = "auto";
-    image.style.borderRadius = "40px";
-
-    // Create right panel of self description
-    const rightPanel = document.getElementById("rightpanel");   // Get Right Panel
     const aboutText = document.createElement("h1");             // Create and style about me text
     aboutText.classList.add("aboutMeText");
-    aboutText.textContent = "Marquette University Alumni. Software Engineer. IT Professional."
-    aboutText.style.width = "30vw";
-    aboutText.style.height = "auto";
+    aboutText.textContent = "Marquette University Alumni. Software Engineer. IT Professional.";
 
-    // Add to HTML
-    leftPanel.classList.add("pop-in");
-    rightPanel.classList.add("pop-in");
-    leftPanel.appendChild(image);
-    rightPanel.appendChild(aboutText);
+    // Get body selector and style
+    const body = document.getElementById("body-container");
+
+    // Append Elements to body-container
+    body.classList.add("pop-in");
+    body.appendChild(image);
+    body.appendChild(aboutText);
 }
 
 function portfolio() {
@@ -58,29 +43,22 @@ function portfolio() {
 }
 
 function resume() {
-    const leftPanel = document.getElementById("leftpanel");
+    // Create elements
     const resume = document.createElement("embed");
+    resume.classList.add("resumeEmbed");
     resume.src = 'assets/placeholderPDF.pdf';
-    resume.style.width = "30vw";
-    resume.style.height = "50vh";
     resume.type = "application/pdf";
-
-    const rightPanel = document.getElementById("rightpanel");
-    const download = document.createElement("h2");
+    const download = document.createElement("button");
+    download.classList.add("downloadBtn");
     download.textContent = "Download PDF";
-    download.style.width = "30vw";
-    download.style.height = "auto";
 
-    leftPanel.classList.add("pop-in");
-    leftPanel.appendChild(resume);
-    rightPanel.classList.add("pop-in");
-    rightPanel.appendChild(download);
+    const body = document.getElementById("body-container");
+    body.classList.add("pop-in");
+    body.append(resume);
+    body.append(download);
 }
 
 function contact() {
-    const leftPanel = document.getElementById("leftpanel");
-
-    const rightPanel = document.getElementById("rightpanel");
     const socialHeader = document.createElement("h1");
     socialHeader.textContent = "SOCIALS";
     const linkedInLink = document.createElement("a");
@@ -105,15 +83,11 @@ function contact() {
     const email = document.createElement("h2");
     email.innerHTML = "carlanthonybarcenas@gmail.com";
 
-    rightPanel.append(socialHeader);
-    rightPanel.append(linkedInLink);
-    rightPanel.append(githubLink);
-
-    rightPanel.append(contactHeader);
-    rightPanel.append(phoneNumber);
-    rightPanel.append(email);
-    var nodes = rightPanel.childNodes;          // Edit Margin of right panel nodes
-    for (var i = 0; i < nodes.length; i++) {
-        nodes[i].style.margin = 0;
-    }
+    const body = document.getElementById("body-container");
+    body.appendChild(socialHeader);
+    body.appendChild(linkedInLink);
+    body.appendChild(githubLink);
+    body.appendChild(contactHeader);
+    body.appendChild(phoneNumber);
+    body.appendChild(email);
 }

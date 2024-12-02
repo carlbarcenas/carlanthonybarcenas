@@ -22,7 +22,7 @@
     font-style: italic;
 }
 
-
+/*------------------------------------------------------------------------------------*/
 /* General */
 body {
     margin: 0;
@@ -32,7 +32,7 @@ h1 {
     font-family: "Gloock";
 }
 
-
+/*------------------------------------------------------------------------------------*/
 /* Header */
 .header {
     display: flex;
@@ -116,10 +116,11 @@ li:hover {
     background: linear-gradient(black, white);
 }
 
+/*------------------------------------------------------------------------------------*/
 /* Body Animations */
 .pop-in {
-    animation: pop-in 0.15s;
-    -webkit-animation: pop-in 0.15s;
+    animation: pop-in 0.25s;
+    -webkit-animation: pop-in 0.25s;
 }
 
 @keyframes pop-in {
@@ -128,7 +129,7 @@ li:hover {
     }
     30% {
         transform: scale(1.025);
-        opacity: 0.5;
+        opacity: 0.3;
     }
     100% {
         transform: scale(1);
@@ -137,17 +138,18 @@ li:hover {
 }
 
 .pop-out {
-    animation: pop-out 0.15s;
-    -webkit-animation: pop-out 0.15s;
+    animation: pop-out 0.25s;
+    -webkit-animation: pop-out 0.25s;
 }
 
 @keyframes pop-out {
     0% {
         opacity: 1;
     }
+
     75% {
         transform: scale(1.05);
-        opacity: 0.5;
+        opacity: 0.25;
     }
     100% {
         transform: scale(1.1);
@@ -156,31 +158,43 @@ li:hover {
 }
 
 
+/*------------------------------------------------------------------------------------*/
 /* Body */
 /* TODO: Selected Item Styling. Maybe only move the black highlight if the object contains class "active"?*/
 .body-container {
     display: flex;
     width: 100vw;
-    height: 80vh;
-    flex-direction: row;
+    height: 90vh;
+    flex-direction: column;
     flex: 1 1 auto;
     justify-content: center;
     align-items: center;
 }
 
-.column {
-    width: 45%;
-    padding: 10px;
-    height: auto;
-    text-align: center;
-}
-
-.midcolumn {
-    width: 10%;
-    padding: 10px;
-    height: auto;
-    text-align: center;
-}
-
-
+/*------------------------------------------------------------------------------------*/
 /* Panel Styling */
+/* About Me */
+.selfImage {
+    width: 30vw;
+    height: auto;
+    border-radius: 20px;
+}
+
+.aboutMeText {
+    width: 40vw;
+    text-align: center;
+}
+
+/* Portfolio */
+
+
+/* Resume */
+.resumeEmbed {
+    width: auto;
+    height: 80vh;
+}
+
+.downloadBtn {
+    width: 30vw;
+    height: auto;
+}
