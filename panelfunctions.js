@@ -9,7 +9,7 @@ function transitionState(nextStateFunction) {
     body.addEventListener("animationend", function () {
         body.classList.remove("pop-out");
         body.innerHTML = "";
-        
+
         // Memory Cleanup
         var nodes = body.childNodes;
         for (var i = 0; i < nodes.length; i++) {
@@ -25,24 +25,53 @@ function aboutMe() {
     const image = document.createElement("img");
     image.src = 'images/grad_photo.jpg';
     image.classList.add("selfImage");
-    const aboutText = document.createElement("h1");             // Create and style about me text
-    aboutText.classList.add("aboutMeText");
-    aboutText.textContent = "Marquette University Alumni. Software Engineer. IT Professional.";
+
+    const headerContainer = document.createElement("div");
+    headerContainer.classList.add("headerContainer");
+    const header1 = document.createElement("h1");
+    header1.textContent = "MARQUETTE UNIVERSITY ALUMNI";
+    header1.classList.add("header1");
+    const header2 = document.createElement("h1");
+    header2.textContent = "<Software Engineer>";
+    header2.classList.add("header2");
+    const header3 = document.createElement("h1");
+    header3.textContent = "IT Professional";
+    header3.classList.add("header3");
+    headerContainer.appendChild(header1);
+    headerContainer.appendChild(header2);
+    headerContainer.appendChild(header3);
     // TODO: Consolas for Software Engineer, purple
-    // TODO: VT323 for IT Professional
+    // TODO: VT323 for IT Professional OR Roboto Mono
     // Maybe do a panel setup
 
-    const bodyText = document.createElement("p");
+    const bodyText = document.createElement("div");
     bodyText.classList.add("bodyText");
-    bodyText.textContent = "Hi, my name is Carl Barcenas. I'm a graduate of Marquette University with a B.S. in Computer Engineering."
+    const line1 = document.createElement("p");
+    line1.textContent = "Hi, I’m Carl Barcenas!";
+    const line2 = document.createElement("p");
+    line2.textContent = "I’m an IT professional with a passion for problem-solving and technology.";
+    const line3 = document.createElement("p");
+    line3.textContent = "With hands-on experience managing systems and troubleshooting issues, I’m now expanding my skill set to become a software engineer.";
+    const line4 = document.createElement("p");
+    line4.textContent = `I enjoy tackling complex challenges, learning new programming languages, and building solutions that make a difference.`;
+    const line5 = document.createElement("p");
+    line5.textContent = "Let's connect and build something great together!";
+    bodyText.append(line1);
+    bodyText.append(line2);
+    bodyText.append(line3);
+    bodyText.append(line4);
+    bodyText.append(line5);
 
     // Get body selector and style
     const body = document.getElementById("body-container");
 
     // Append Elements to body-container
+    body.style.display = "flex";
+    body.style.flexDirection = "row";
     body.classList.add("pop-in");
+    body.appendChild(headerContainer);
     body.appendChild(image);
-    body.appendChild(aboutText);
+    //body.appendChild(aboutText);
     body.appendChild(bodyText);
 }
 
@@ -69,7 +98,9 @@ function resume() {
 function contact() {
     // Create Logos
     const socialHeader = document.createElement("h1");
+    socialHeader.classList.add("contactHeader");
     socialHeader.textContent = "SOCIALS";
+
     const linkedInLink = document.createElement("a");
     linkedInLink.href = "http://www.linkedin.com/in/carlbarcenas/";
     linkedInLink.target = "_blank";
@@ -93,14 +124,17 @@ function contact() {
 
     // Create Contacts
     const contactHeader = document.createElement("h1");
+    contactHeader.classList.add("contactHeader");
     contactHeader.innerText = "CONTACTS";
-    contactHeader.style.paddingTop = "15px";
     const phoneNumber = document.createElement("h2");
     phoneNumber.innerHTML = "+1 (630) 812-8124";
     const email = document.createElement("h2");
     email.innerHTML = "carlanthonybarcenas@gmail.com";
 
+    // Append to body
     const body = document.getElementById("body-container");
+    body.style.display = "flex";
+    body.style.flexDirection = "column";
     body.appendChild(socialHeader);
     body.appendChild(logoLinks);
     body.appendChild(contactHeader);

@@ -6,3 +6,6 @@ To Do List:
 * Portfolio Cards
 * About Page Stylization
     * Maybe a different about me page
+* Particle Engine background?
+
+* TRY SEPARATING NAVBAR WITH INDEX PAGES

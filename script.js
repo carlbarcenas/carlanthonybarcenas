@@ -12,7 +12,7 @@ navbar_items.forEach((listitem) => {
             }
             active_nav = document.querySelector("#active");     // Update active_nav variable
 
-            // Update L + R Panels
+            // Update Info
             switch (active_nav.className) {
                 case 'aboutme':
                     transitionState(aboutMe);
