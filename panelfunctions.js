@@ -28,6 +28,9 @@ function aboutMe() {
     const aboutText = document.createElement("h1");             // Create and style about me text
     aboutText.classList.add("aboutMeText");
     aboutText.textContent = "Marquette University Alumni. Software Engineer. IT Professional.";
+    // TODO: Consolas for Software Engineer, purple
+    // TODO: VT323 for IT Professional
+    // Maybe do a panel setup
 
     const bodyText = document.createElement("p");
     bodyText.classList.add("bodyText");
@@ -93,7 +96,7 @@ function contact() {
     contactHeader.innerText = "CONTACTS";
     contactHeader.style.paddingTop = "15px";
     const phoneNumber = document.createElement("h2");
-    phoneNumber.innerHTML = "+1(630)812-8124";
+    phoneNumber.innerHTML = "+1 (630) 812-8124";
     const email = document.createElement("h2");
     email.innerHTML = "carlanthonybarcenas@gmail.com";
 

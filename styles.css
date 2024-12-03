@@ -72,6 +72,9 @@ li:hover {
     color: white;
     text-decoration-color: rgb(255, 255, 255);
     text-underline-offset: 0.4em;
+    padding: 0 20px 0 20px;
+    font-style: oblique;
+
     transition: all 0.5s linear;
 }
 
