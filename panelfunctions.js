@@ -128,8 +128,11 @@ function contact() {
     contactHeader.innerText = "CONTACTS";
     const phoneNumber = document.createElement("h2");
     phoneNumber.innerHTML = "+1 (630) 812-8124";
+    const emailLink = document.createElement("a");
+    emailLink.href = "mailto:carlanthonybarcenas@gmail.com";
     const email = document.createElement("h2");
     email.innerHTML = "carlanthonybarcenas@gmail.com";
+    emailLink.appendChild(email);
 
     // Append to body
     const body = document.getElementById("body-container");
@@ -139,5 +142,5 @@ function contact() {
     body.appendChild(logoLinks);
     body.appendChild(contactHeader);
     body.appendChild(phoneNumber);
-    body.appendChild(email);
+    body.appendChild(emailLink);
 }
