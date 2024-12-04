@@ -43,7 +43,8 @@ li {
     font-size: 20px;
     font-weight: 700;
     color: black;
-    filter: blur(1px);
+    /* filter: blur(1px); */
+
     transition: all 1.5s ease;
     cursor: pointer;
     text-decoration: underline 0.15em rgba(0, 0, 0, 0);
