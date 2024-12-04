@@ -134,11 +134,14 @@ function contact() {
     const contactHeader = document.createElement("h1");
     contactHeader.classList.add("contactHeader");
     contactHeader.innerText = "CONTACTS";
+    
     const phoneNumber = document.createElement("h2");
     phoneNumber.innerHTML = "+1 (630) 812-8124";
+
     const emailLink = document.createElement("a");
     emailLink.href = "mailto:carlanthonybarcenas@gmail.com";
     const email = document.createElement("h2");
+    email.classList.add("email");
     email.innerHTML = "carlanthonybarcenas@gmail.com";
     emailLink.appendChild(email);
 

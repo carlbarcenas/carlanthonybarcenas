@@ -236,6 +236,33 @@ a {
 }
 
 /* Portfolio */
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(226, 222, 222, 0.466);
+    border-radius: 4px;
+    padding: 2vh 1.5vw 2vh 1.5vw;
+}
+
+.cardImg {
+    height: 8vh;
+    width: auto;
+    padding: 0 0 0 2vw;
+}
+
+.cardTitle {
+    margin: 0;
+    font-size: 16px;
+    margin: 0 0 2vh 0;
+}
+
+.cardDesc {
+    margin: 0;
+    font-size: 14px;
+}
 
 
 /* Resume */
@@ -264,4 +291,9 @@ a {
     display: flex;
     flex-direction: row;
     text-align: center;
+}
+
+.email:hover {
+    scale: 1.025;
+    transition: all 0.25s ease-in-out;
 }

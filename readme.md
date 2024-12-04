@@ -7,3 +7,6 @@ To Do List:
 * Particle Engine background?
 
 * TRY SEPARATING NAVBAR WITH INDEX PAGES
+
+In Progress:
+* Portfolio createCard Function
