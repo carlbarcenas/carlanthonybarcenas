@@ -1,6 +1,4 @@
-# Temporary ReadMe File to track what's left to do:
-Stuck with basic navbar.
-
+# ReadMe File to track what's left to do:
 To Do List:
 * Create a home page for when clicking logo
 * Portfolio Cards

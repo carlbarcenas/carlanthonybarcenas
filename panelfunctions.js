@@ -1,3 +1,9 @@
+/*
+Written by Carl Barcenas
+This file is meant to contain the functions used to transition between
+the navbar items (with the exception of 'Portfolio', this will be in portfolio.js)
+*/
+
 // Helper function to transition between panel functions.
 // Parameters: nextStateFunction = name of the function being transitioned to.
 function transitionState(nextStateFunction) {
@@ -20,12 +26,21 @@ function transitionState(nextStateFunction) {
     })
 }
 
+function home() {
+    const homeHeader = document.createElement("h1");
+    homeHeader.textContent = "Welcome back! I'm still Carl :)";
+
+    const body = document.getElementById("body-container");
+    body.appendChild(homeHeader);
+}
+
 function aboutMe() {
     // Create and style elements
     const image = document.createElement("img");
     image.src = 'images/grad_photo.jpg';
     image.classList.add("selfImage");
 
+    // Header Titles
     const headerContainer = document.createElement("div");
     headerContainer.classList.add("headerContainer");
     const header1 = document.createElement("h1");
@@ -40,10 +55,8 @@ function aboutMe() {
     headerContainer.appendChild(header1);
     headerContainer.appendChild(header2);
     headerContainer.appendChild(header3);
-    // TODO: Consolas for Software Engineer, purple
-    // TODO: VT323 for IT Professional OR Roboto Mono
-    // Maybe do a panel setup
 
+    // Body Text
     const bodyText = document.createElement("div");
     bodyText.classList.add("bodyText");
     const line1 = document.createElement("p");
@@ -71,12 +84,7 @@ function aboutMe() {
     body.classList.add("pop-in");
     body.appendChild(headerContainer);
     body.appendChild(image);
-    //body.appendChild(aboutText);
     body.appendChild(bodyText);
-}
-
-function portfolio() {
-
 }
 
 function resume() {
