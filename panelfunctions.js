@@ -6,9 +6,12 @@ the navbar items (with the exception of 'Portfolio', this will be in portfolio.j
 
 // Helper function to transition between panel functions.
 // Parameters: nextStateFunction = name of the function being transitioned to.
+
+const body = document.getElementById("body-container");
+const heroSection = document.getElementById("heroSection");
+
 function transitionState(nextStateFunction) {
     // Add panels to pop-out
-    const body = document.getElementById("body-container");
     body.classList.add("pop-out");
 
     // Wait for right panel animation to finish, then add new
@@ -30,7 +33,6 @@ function home() {
     const homeHeader = document.createElement("h1");
     homeHeader.textContent = "Welcome back! I'm still Carl :)";
 
-    const body = document.getElementById("body-container");
     body.appendChild(homeHeader);
 }
 
@@ -75,13 +77,11 @@ function aboutMe() {
     bodyText.append(line4);
     bodyText.append(line5);
 
-    // Get body selector and style
-    const body = document.getElementById("body-container");
-
-    // Append Elements to body-container
+    // Append Elements to body
     body.style.display = "flex";
     body.style.flexDirection = "row";
     body.classList.add("pop-in");
+    
     body.appendChild(headerContainer);
     body.appendChild(image);
     body.appendChild(bodyText);
@@ -97,13 +97,17 @@ function resume() {
     download.classList.add("downloadBtn");
     download.textContent = "Download PDF";
 
-    const body = document.getElementById("body-container");
     body.classList.add("pop-in");
     body.append(resume);
     body.append(download);
 }
 
 function contact() {
+    // Page Text
+    const pageText = document.createElement("h1");
+    pageText.innerHTML = "Feel free to contact me to learn more about me or for career opportunities!"
+    pageText.classList.add("pageText");
+
     // Create Logos
     const socialHeader = document.createElement("h1");
     socialHeader.classList.add("contactHeader");
@@ -146,9 +150,9 @@ function contact() {
     emailLink.appendChild(email);
 
     // Append to body
-    const body = document.getElementById("body-container");
     body.style.display = "flex";
     body.style.flexDirection = "column";
+    body.appendChild(pageText);
     body.appendChild(socialHeader);
     body.appendChild(logoLinks);
     body.appendChild(contactHeader);
