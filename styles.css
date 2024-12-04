@@ -93,12 +93,6 @@ li:hover {
     transition: all .3s;
 }
 
-.transition-space {
-    height: 20px;
-    width: 100%;
-    background: linear-gradient(black, white);
-}
-
 /*------------------------------------------------------------------------------------*/
 /* Body Animations */
 .pop-in {
