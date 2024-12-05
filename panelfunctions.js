@@ -4,11 +4,13 @@ This file is meant to contain the functions used to transition between
 the navbar items (with the exception of 'Portfolio', this will be in portfolio.js)
 */
 
+// GLOBAL VARS
+const body = document.getElementById("body-container");
+
 // Helper function to transition between panel functions.
 // Parameters: nextStateFunction = name of the function being transitioned to.
 function transitionState(nextStateFunction) {
     // Add panels to pop-out
-    const body = document.getElementById("body-container");
     body.classList.add("pop-out");
 
     // Wait for right panel animation to finish, then add new
@@ -30,7 +32,6 @@ function home() {
     const homeHeader = document.createElement("h1");
     homeHeader.textContent = "Welcome back! I'm still Carl :)";
 
-    const body = document.getElementById("body-container");
     body.appendChild(homeHeader);
 }
 
@@ -75,9 +76,6 @@ function aboutMe() {
     bodyText.append(line4);
     bodyText.append(line5);
 
-    // Get body selector and style
-    const body = document.getElementById("body-container");
-
     // Append Elements to body-container
     body.style.display = "flex";
     body.style.flexDirection = "row";
@@ -97,7 +95,6 @@ function resume() {
     download.classList.add("downloadBtn");
     download.textContent = "Download PDF";
 
-    const body = document.getElementById("body-container");
     body.classList.add("pop-in");
     body.append(resume);
     body.append(download);
@@ -146,7 +143,6 @@ function contact() {
     emailLink.appendChild(email);
 
     // Append to body
-    const body = document.getElementById("body-container");
     body.style.display = "flex";
     body.style.flexDirection = "column";
     body.appendChild(socialHeader);

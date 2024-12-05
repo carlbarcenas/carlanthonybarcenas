@@ -163,7 +163,7 @@ a {
 .selfImage {
     width: 30vw;
     height: auto;
-    border-radius: 1000px;
+    border-radius: 15px;
     margin: 0 20px 0 20px;
 }
 

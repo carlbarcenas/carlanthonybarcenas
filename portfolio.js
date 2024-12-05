@@ -1,3 +1,8 @@
+/*
+A Function used to create a singular card for a singular project.
+Styling found in styles.css
+Parameters: cardTitle - String / cardDesc - String / imgSrc - String /
+*/
 function createCard(cardTitle, cardDesc, imgSrc) {
     const cardContainer = document.createElement("div");
     cardContainer.classList.add("cardContainer");
@@ -22,6 +27,9 @@ function createCard(cardTitle, cardDesc, imgSrc) {
     document.getElementById("body-container").appendChild(cardContainer);
 }
 
+/*
+void function to create the portfolio page.
+*/
 function portfolio() {
     createCard("Personal Website", "You're looking at it!", "images/Logo-black.png");
 }
