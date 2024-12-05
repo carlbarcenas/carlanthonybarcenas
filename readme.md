@@ -10,4 +10,3 @@ To Do List:
 
 In Progress:
 * Portfolio createCard Function
-* Section in between navbar and body
