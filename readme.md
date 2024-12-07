@@ -10,3 +10,7 @@ To Do List:
 
 In Progress:
 * Portfolio createCard Function
+
+For the Future:
+* Possible animation for home screen: https://codepen.io/SBDesign/pen/XWbKwwQ
+* Make sure to credit Vanta.js

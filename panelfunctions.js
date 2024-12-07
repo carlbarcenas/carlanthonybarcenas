@@ -31,7 +31,8 @@ function transitionState(nextStateFunction) {
 function home() {
     const homeHeader = document.createElement("h1");
     homeHeader.textContent = "Welcome back! I'm still Carl :)";
-
+    homeHeader.style.zIndex = 2000;
+    
     body.appendChild(homeHeader);
 }
 

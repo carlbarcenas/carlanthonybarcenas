@@ -41,12 +41,33 @@
             <li class="contact">CONTACT</li>
         </ul>
     </div>
+    <div id="animation-container">
     <div class="body-container" id="body-container">
         <h1>Hi, I'm Carl :)</h1>
     </div>
+</div>
+
+
     <script src="script.js" async defer></script>
     <script src="panelfunctions.js"></script>
     <script src="portfolio.js"></script>
+    <script src="p5.min.js"></script>
+    <script src="vanta.trunk.min.js"></script>
+    <script>
+        VANTA.TRUNK({
+            el: "#animation-container",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xa09d9d,
+            backgroundColor: 0xffffff,
+            spacing: 1.50
+        })
+    </script>
 </body>
 
 </html>
