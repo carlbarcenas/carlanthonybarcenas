@@ -66,7 +66,7 @@ function portfolio() {
     portfolioContainer.classList.add("portfolioContainer");
 
     // Creating cards
-    card1 = createCard("Personal Website", "You're looking at it!", "images/Logo-white.png");
+    card1 = createCard("Personal Website", "You're looking at it!", "images/personal_logo_white.png");
     portfolioContainer.appendChild(card1);
 
     // Append to body-container
