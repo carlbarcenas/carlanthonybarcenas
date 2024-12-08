@@ -66,22 +66,35 @@ function portfolio() {
     portfolioContainer.classList.add("portfolioContainer");
 
     // Creating cards
-    card1 = createCard("Personal Website", "You're looking at it!", "images/personal_logo_white.png");  // Personal Site
+    card1 = createCard("Personal Website", `You're looking at it! More of a DOM practice page that I just continued to update
+        for fun, but ended up enjoying it enough to polish it to the end.`, "images/personal_logo_white.png");  // Personal Site
     portfolioContainer.appendChild(card1);
 
     // Etch A Sketch
+    // Polish this one before adding
 
     // Air Distance Calculator
 
     // Remaining Useful Life of Industrial Machine MLM
+    card2 = createCard("MLM For Industrial Machines", `A machine learning model to predict the Remaining Useful Life 
+        of an Industrial Machine based on sensor data.`, "images/IndustrialArm.png");
+    portfolioContainer.appendChild(card2);
 
     // Embedded Scoreboard
+    card3 = createCard("Scoreboard Tablet", `A live score tracker for sports games of choice using the LandTiger 2.0 
+        Baseboard.`, 'images/quickscore.png');
+        portfolioContainer.appendChild(card3);
 
     // Merge Sort in RISC-V Assembly
+    card4 = createCard("Merge Sort in Assembly", `Programming like our forefathers. Recreated merge sort algorithm in
+        RISC-V Assembly language`, 'images/RISCV.png');
+    portfolioContainer.appendChild(card4);
+    // MU Xinu OS
+    card5 = createCard("Xinu OS", `Recreation of 'Xinu Is Not Unix' OS for the purpose of learning process management, memory management, file system management, pain,
+        and more courtesy of Marquette University.`, 'images/xinuos.jpg');
+    portfolioContainer.appendChild(card5);
 
     // Javascript Tetris
-
-    // MU Xinu OS
 
     // Plant Environment Probe
 

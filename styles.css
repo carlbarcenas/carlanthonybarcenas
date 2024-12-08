@@ -238,6 +238,13 @@ a {
 }
 
 /* Portfolio */
+.portfolioContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .cardContainer {
     display: flex;
     flex-direction: row;
@@ -246,7 +253,11 @@ a {
 
     background-color: rgba(226, 222, 222, 0.466);
     border-radius: 4px;
-    padding: 2vh 1.5vw 2vh 1.5vw;
+    padding: 1vh 0.5vw 1vh 0.5vw;
+    margin: 3vh 1vw 3vh 1vw;
+
+    width: 18vw;
+    height: auto;
 }
 
 .cardImg {
@@ -264,6 +275,7 @@ a {
 .cardDesc {
     margin: 0;
     font-size: 14px;
+    text-wrap: wrap;
 }
 
 
