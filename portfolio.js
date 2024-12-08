@@ -66,8 +66,26 @@ function portfolio() {
     portfolioContainer.classList.add("portfolioContainer");
 
     // Creating cards
-    card1 = createCard("Personal Website", "You're looking at it!", "images/personal_logo_white.png");
+    card1 = createCard("Personal Website", "You're looking at it!", "images/personal_logo_white.png");  // Personal Site
     portfolioContainer.appendChild(card1);
+
+    // Etch A Sketch
+
+    // Air Distance Calculator
+
+    // Remaining Useful Life of Industrial Machine MLM
+
+    // Embedded Scoreboard
+
+    // Merge Sort in RISC-V Assembly
+
+    // Javascript Tetris
+
+    // MU Xinu OS
+
+    // Plant Environment Probe
+
+    // MUBB Report Synthesizer
 
     // Append to body-container
     const body = document.getElementById("body-container");

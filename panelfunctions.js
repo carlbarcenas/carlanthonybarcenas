@@ -111,7 +111,7 @@ function contact() {
     linkedInLink.href = "http://www.linkedin.com/in/carlbarcenas/";
     linkedInLink.target = "_blank";
     const linkedInLogo = document.createElement("img");
-    linkedInLogo.src = "/images/linkedin_white.png";
+    linkedInLogo.src = "images/linkedin_white.png";
     linkedInLogo.classList.add("logo");
     linkedInLink.appendChild(linkedInLogo);
 
@@ -119,7 +119,7 @@ function contact() {
     githubLink.href = "http://www.github.com/carlbarcenas/";
     githubLink.target = "_blank";
     const githubLogo = document.createElement("img");
-    githubLogo.src = "/images/github_white.png";
+    githubLogo.src = "images/github_white.png";
     githubLogo.classList.add("logo");
     githubLink.appendChild(githubLogo);
 
