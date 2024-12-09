@@ -38,6 +38,14 @@ function home() {
 
 function aboutMe() {
     // Create and style elements
+    // Page Title
+    const pageTitle = document.createElement("h1");
+    pageTitle.classList.add("pageTitle");
+    pageTitle.textContent = "Carl Anthony Barcenas";
+
+    const mainBodyContainer = document.createElement("div");
+    mainBodyContainer.classList.add("mainBodyContainer");
+    // Image
     const image = document.createElement("img");
     image.src = 'images/grad_photo.jpg';
     image.classList.add("selfImage");
@@ -57,6 +65,7 @@ function aboutMe() {
     headerContainer.appendChild(header1);
     headerContainer.appendChild(header2);
     headerContainer.appendChild(header3);
+    
 
     // Body Text
     const bodyText = document.createElement("div");
@@ -77,13 +86,22 @@ function aboutMe() {
     bodyText.append(line4);
     bodyText.append(line5);
 
+
     // Append Elements to body-container
-    body.style.display = "flex";
-    body.style.flexDirection = "row";
+    mainBodyContainer.style.display = "flex";
+    mainBodyContainer.style.flexDirection = "row";
+
+    const headerAndImage = document.createElement("div");
+    headerAndImage.classList.add("headerAndImage");
+    headerAndImage.appendChild(headerContainer);
+    headerAndImage.appendChild(image);
+
+    mainBodyContainer.appendChild(headerAndImage);
+    mainBodyContainer.appendChild(bodyText);
+
     body.classList.add("pop-in");
-    body.appendChild(headerContainer);
-    body.appendChild(image);
-    body.appendChild(bodyText);
+    body.appendChild(pageTitle);
+    body.appendChild(mainBodyContainer);
 }
 
 function resume() {
@@ -102,6 +120,11 @@ function resume() {
 }
 
 function contact() {
+    // Create Page Title
+    const pageTitle = document.createElement("h1");
+    pageTitle.classList.add("pageTitle");
+    pageTitle.textContent = "Contact me if you have any questions or opportunities!";
+
     // Create Logos
     const socialHeader = document.createElement("h1");
     socialHeader.classList.add("contactHeader");
@@ -146,6 +169,7 @@ function contact() {
     // Append to body
     body.style.display = "flex";
     body.style.flexDirection = "column";
+    body.appendChild(pageTitle);
     body.appendChild(socialHeader);
     body.appendChild(logoLinks);
     body.appendChild(contactHeader);
